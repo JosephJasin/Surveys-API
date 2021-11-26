@@ -6,7 +6,7 @@
 
 **don't forget to run 😁**
 
-	npm init
+    npm install
 
 **Run in production mode**
 
