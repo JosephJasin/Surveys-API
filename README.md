@@ -6,7 +6,23 @@
 
 **don't forget to run 😁**
 
-    npm install
+	npm install
+
+**On Windows**:
+
+**Run in production mode**
+
+    npm start
+
+**Run in dev mode**
+
+    npm run dev_win
+
+**Run tests**
+
+    npm run test_win
+
+**On Linux & Mac**:
 
 **Run in production mode**
 
@@ -19,3 +35,6 @@
 **Run tests**
 
     npm test
+
+
+

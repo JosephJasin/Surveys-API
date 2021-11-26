@@ -1,5 +1,5 @@
 module.exports = {
-    httpPort: 443,
+    httpPort: 80,
 
     survey: {
         question: {
