@@ -43,7 +43,7 @@
 
 **Create a new survey** 
  
- POST: /api/survey
+ POST: /api/survey <br>
  request body:
 
      {
@@ -54,7 +54,7 @@
 	    ]
     }
 **Answer a survey** 
- POST: /api/survey/:id
+ POST: /api/survey/:id <br>
  request body:
  
 
