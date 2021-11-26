@@ -54,8 +54,9 @@
 	    ]
     }
 **Answer a survey** 
+
  POST: /api/survey/:id <br>
- request body:
+ request body: contains the number of the answer not the answer itself
  
 
     {"answer" : 0}

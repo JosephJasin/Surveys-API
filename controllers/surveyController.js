@@ -38,7 +38,7 @@ const answerSurvey = (req, res) => {
         return;
     }
 
-    if (req.body.answer === undefined || req.body.answer < 0 || req.body.answer >= survey.answers.length) {
+    if (typeof(req.body.answer) !== 'number' || req.body.answer < 0 || req.body.answer >= survey.answers.length) {
         res.status(404).json({error: 'Invalid answer'});
         return;
     }

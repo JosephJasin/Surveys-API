@@ -7,10 +7,13 @@ class Survey {
      * @param {string[]} answers
      * @param {number[]} counter
      */
-    constructor(question, answers, counter = null) {
-        this.question = question ?? '';
-        this.answers = answers ?? [];
-        this.counter = counter ?? Array(answers.length).fill(0);
+    constructor(question, answers, counter) {
+        this.question = question;
+
+        if (Array.isArray(answers)) {
+            this.answers = answers.map(String);
+            this.counter = counter ?? Array(answers.length).fill(0);
+        }
     }
 
     /**
@@ -18,6 +21,9 @@ class Survey {
      * @returns {Object | null}
      */
     validate = () => {
+        if (!Array.isArray(this.counter) || typeof (this.question) !== 'string')
+            return {type: 'Type mismatch'};
+
         let errors = {};
 
         //Validate the question.
