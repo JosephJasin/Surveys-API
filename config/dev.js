@@ -3,16 +3,14 @@ module.exports = {
 
     survey: {
         question: {
-            minSize: 10,
-            maxSize: 256,
+            minLength: 10,
+            maxLength: 256,
         },
-        answer : {
-            minSize: 1,
-            maxSize: 256,
-        },
-        answers : {
-            minNumber: 2,
-            maxNumber: 10,
+        answer: {
+            minLength: 1,
+            maxLength: 256,
+            minItems: 2,
+            maxItems: 10,
         }
     }
 }

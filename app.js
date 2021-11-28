@@ -17,6 +17,3 @@ app.use((err, req, res , next) => {
 app.use('/api/survey', surveyRoutes);
 
 httpServer.listen(httpPort);
-
-
-

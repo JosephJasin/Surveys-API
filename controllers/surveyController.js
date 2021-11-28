@@ -4,14 +4,9 @@ const surveys = [];
 
 const createSurvey = (req, res) => {
     const survey = new Survey(req.body.question, req.body.answers);
-    const error = survey.validate();
 
-    if (error)
-        res.status(400).json({error});
-    else {
-        const id = surveys.push(survey) - 1;
-        res.json({id});
-    }
+    const id = surveys.push(survey) - 1;
+    res.json({id});
 }
 
 const getSurvey = (req, res) => {
@@ -38,7 +33,7 @@ const answerSurvey = (req, res) => {
         return;
     }
 
-    if (typeof(req.body.answer) !== 'number' || req.body.answer < 0 || req.body.answer >= survey.answers.length) {
+    if (req.body.answer < 0 || req.body.answer >= survey.answers.length) {
         res.status(404).json({error: 'Invalid answer'});
         return;
     }
